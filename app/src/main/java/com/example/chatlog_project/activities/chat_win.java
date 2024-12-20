@@ -274,8 +274,6 @@ public class chat_win extends AppCompatActivity {
         camera_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //ToDo Open Camera
-
                 checkCameraPermission();
 
             }
