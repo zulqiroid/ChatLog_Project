@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color9"
+    android:transitionName="intent"
+    tools:context=".menu.DiscoverFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/recycler_view_Frquest_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <!-- Title Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thoughts"
+                android:textColor="@color/color5"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <!-- Divider Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/color7" />
+
+            <!-- Horizontal Layout for Profile and RecyclerView -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Profile Section -->
+                <LinearLayout
+                    android:id="@+id/thought_profile_section_uploader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:transitionName="thougths"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/_10sdp">
+
+                    <!-- RelativeLayout for Profile Image and Text -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <!-- Circular Image -->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_below="@id/any_thought_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/user_w"
+                            app:civ_border_color="@color/color2"
+                            app:civ_border_overlay="true"
+                            app:civ_border_width="1dp" />
+
+                        <TextView
+                            android:id="@+id/any_thought_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="-20dp"
+                            android:background="@drawable/any_thought_background"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxWidth="@dimen/_70sdp"
+                            android:maxLines="2"
+                            android:padding="@dimen/_3sdp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="false"
+                            android:text="Any Thought?"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RelativeLayout>
+
+                    <!-- Label Below the Profile -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="You"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+                <!-- ShimmerRecyclerView -->
+                <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                    android:id="@+id/recycler_view_thoughts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:listitem="@layout/thoughts_user_profile"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:shimmer_demo_angle="20"
+                    app:shimmer_demo_child_count="10"
+                    app:shimmer_demo_grid_child_count="1"
+                    app:shimmer_demo_layout="@layout/demo_layout_toughts"
+                    app:shimmer_demo_layout_manager_type="linear_horizontal" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/recycler_view_Suggestion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/recycler_view_Frquest_layout"
+            android:orientation="vertical"
+            tools:ignore="ObsoleteLayoutParam">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chats"
+                android:textColor="@color/color5"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/color7" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="0dp">
+                <TextView
+                    android:id="@+id/btn_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@drawable/selected_chat_group_bg"
+                    android:gravity="center"
+                    android:text="Chats"
+                    android:textColor="@color/black"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    />
+                <TextView
+                    android:id="@+id/btn_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@drawable/any_thought_background"
+                    android:gravity="center"
+                    android:text="Groups"
+                    android:textColor="@color/color3"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    />
+            </LinearLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_view_chats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                tools:listitem="@layout/user_profile_items"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/demo_layout"
+                app:shimmer_demo_layout_manager_type="linear_vertical"
+                tools:ignore="ObsoleteLayoutParam"
+                android:visibility="visible"/>
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_view_groups"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                tools:listitem="@layout/user_profile_items"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/demo_layout"
+                app:shimmer_demo_layout_manager_type="linear_vertical"
+                tools:ignore="ObsoleteLayoutParam"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

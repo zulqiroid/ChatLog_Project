@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_rounded_background"
+    android:padding="@dimen/_16sdp"
+    android:elevation="8dp">
+
+
+    <!-- View Thought Button -->
+    <LinearLayout
+        android:id="@+id/btn_view_thought"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_12sdp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_view"
+            android:tint="@color/black"
+            android:layout_marginEnd="@dimen/_8sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Your Thought"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+
+    <!-- Delete Thought Button -->
+    <LinearLayout
+        android:id="@+id/btn_delete_thought"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_12sdp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_delete"
+            android:layout_marginEnd="@dimen/_8sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Your Thought"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+
+    <!-- Cancel Button -->
+    <LinearLayout
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_12sdp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/cross"
+            android:tint="@color/black"
+            android:layout_marginEnd="@dimen/_8sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+</LinearLayout>

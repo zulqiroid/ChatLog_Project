@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "274071896642",
+    "project_id": "chatlog-c2899",
+    "storage_bucket": "chatlog-c2899.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274071896642:android:27aa61ad9085d6caf263db",
+        "android_client_info": {
+          "package_name": "com.example.chatlog_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6zLYUrnsTkmlEs0cCaaxLirPLhbF2Ewk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChatLog_Project" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:colorPrimary">@color/color8</item>
+        <item name="colorPrimaryVariant">@color/color9</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorSecondary">@color/color7</item>
+        <item name="colorSecondaryVariant">@color/color6</item>
+        <item name="android:windowBackground">@color/color9</item>
+        <item name="android:statusBarColor">@color/color2</item>
+        <item name="android:navigationBarColor">@color/color9</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorAccent">@color/color9</item>
+
+        <!-- Customize your dark theme here. -->
+        <item name="android:colorBackground">@color/color9</item>
+    </style>
+
+    <style name="Theme.ChatLog_Project" parent="Base.Theme.ChatLog_Project" />
+
+    <style name="TextInputLayoutOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@drawable/text_input_color_selector</item>
+    </style>
+
+    <style name="dialogue">
+        <item name="android:windowBackground">@drawable/empty_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Custom Toolbar Title Style -->
+    <style name="CustomToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/suse_bold</item>
+        <item name="android:textSize">@dimen/_30sdp</item>
+    </style>
+
+    <style name="WhiteMenuItemStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NextActivity" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowEnterTransition">@drawable/explode</item>
+        <item name="android:windowExitTransition">@drawable/explode</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!-- Profile Section -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/thought_profile_section"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/_10sdp">
+
+        <!-- RelativeLayout for Profile Image and Text -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!-- Circular Image -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@id/any_thought_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/user_w"
+                app:civ_border_color="@color/color2"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp" />
+
+            <TextView
+                android:id="@+id/any_thought_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Any Thought?"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-20dp"
+                android:background="@drawable/any_thought_background"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxWidth="@dimen/_70sdp"
+                android:maxLines="2"
+                android:padding="@dimen/_3sdp"
+                android:scrollHorizontally="true"
+                android:singleLine="false" />
+
+        </RelativeLayout>
+
+        <!-- Label Below the Profile -->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="name here"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:maxWidth="@dimen/_70sdp"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:singleLine="false"
+            android:ellipsize="end"
+            />
+    </LinearLayout>

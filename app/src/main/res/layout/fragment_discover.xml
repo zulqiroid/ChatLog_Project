@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".menu.DiscoverFragment"
+    android:background="@color/color9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/recycler_view_Frquest_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_10sdp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Friend Request"
+                android:textColor="@color/color5"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:padding="@dimen/_10sdp"
+
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/color7"
+                android:padding="@dimen/_10sdp"
+                />
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_view_Frquest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/recycler_view_Suggestion"
+                tools:listitem="@layout/discover_user_profile"
+                android:clickable="false"
+                android:focusable="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/demo_layout"
+                app:shimmer_demo_layout_manager_type="linear_vertical"
+                app:shimmer_demo_angle="20"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/recycler_view_Suggestion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/recycler_view_Frquest_layout"
+            tools:ignore="ObsoleteLayoutParam"
+            android:padding="@dimen/_10sdp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suggestions"
+                android:textColor="@color/color5"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/color7"
+                />
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_view_Suggestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/discover_user_profile"
+                android:clickable="false"
+                android:focusable="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/demo_layout"
+                app:shimmer_demo_layout_manager_type="linear_vertical"
+                app:shimmer_demo_angle="20"
+                tools:ignore="ObsoleteLayoutParam" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

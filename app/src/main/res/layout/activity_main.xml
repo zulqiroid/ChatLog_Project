@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color9"
+    tools:context=".activities.MainActivity">
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color9">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/white"
+            app:titleTextAppearance="@style/CustomToolbarTitle"
+            android:theme="@style/WhiteMenuItemStyle"
+           >
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_above="@+id/bottom_nav"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+
+<!--
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:id="@+id/recycler_view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_below="@+id/toolbar_layout"
+        tools:listitem="@layout/user_profile_items"
+        android:clickable="false"
+        android:focusable="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_grid_child_count="1"
+        app:shimmer_demo_layout="@layout/demo_layout"
+        app:shimmer_demo_layout_manager_type="linear_vertical"
+        app:shimmer_demo_angle="20"
+        />
+-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/color9"
+        app:menu="@menu/bottom_menu"
+        android:elevation="@dimen/_30sdp"
+        app:itemRippleColor="@color/color7">
+
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+</RelativeLayout>

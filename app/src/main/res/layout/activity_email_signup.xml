@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.login_screen"
+    android:background="@color/color9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 2 of 2"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/color3"
+            android:padding="@dimen/_10sdp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your email address"
+            android:textColorHint="@color/color2"
+            app:boxCornerRadiusTopStart="@dimen/_10sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+            app:hintTextColor="@color/color2"
+            app:cursorColor="@color/color2"
+            app:helperTextTextColor="@color/color2"
+            app:boxStrokeWidth="@dimen/_1sdp"
+            style="@style/TextInputLayoutOutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/continue_btn"
+            android:fontFamily="@font/suse_semibold"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14sdp"
+            android:background="@drawable/custom_btn"
+            android:textColor="@color/color2"/>
+
+    </LinearLayout>
+</RelativeLayout>

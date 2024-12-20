@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.View_image">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp">
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_w"
+                android:paddingEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/demo_light_transparent"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile picture"
+                android:textColor="@color/white"
+                android:fontFamily="@font/suse_medium"
+                android:textSize="@dimen/_16sdp"/>
+                <TextView
+                    android:id="@+id/time_txtview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00: 00 PM"
+                    android:textColor="@color/color5"
+                    android:fontFamily="@font/suse_medium"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.jsibbold.zoomage.ZoomageView
+        android:id="@+id/myZoomageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="image"
+        android:layout_below="@+id/toolbar"
+        android:paddingTop="@dimen/_25sdp"
+        android:paddingBottom="@dimen/_25sdp"
+        android:scaleType="fitCenter"
+        app:zoomage_restrictBounds="false"
+        app:zoomage_animateOnReset="true"
+        app:zoomage_autoResetMode="UNDER"
+        app:zoomage_autoCenter="true"
+        app:zoomage_zoomable="true"
+        app:zoomage_translatable="true"
+        app:zoomage_minScale="0.6"
+        app:zoomage_maxScale="8"
+        />
+
+</RelativeLayout>

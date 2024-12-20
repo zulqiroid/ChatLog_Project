@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search_icon"
+        android:icon="@drawable/search_w"
+        android:title="Search"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/camera_icon"
+        android:icon="@drawable/camera_w"
+        app:showAsAction="always"
+        android:title="Camera"
+        />
+    <item
+        android:id="@+id/new_group"
+        android:title="New Group"
+        />
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        />
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        />
+
+</menu>

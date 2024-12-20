@@ -1,0 +1,5 @@
+<!-- res/drawable/green_circle.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F20F00"/> <!-- Green color -->
+    <corners android:radius="35dp"/> <!-- Circular appearance -->
+</shape>

@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChatLog_Project" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:colorPrimary">@color/color8</item>
+        <item name="colorPrimaryVariant">@color/color9</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorSecondary">@color/color7</item>
+        <item name="colorSecondaryVariant">@color/color6</item>
+        <item name="android:windowBackground">@color/color9</item>
+        <item name="android:statusBarColor">@color/color2</item>
+        <item name="android:navigationBarColor">@color/color9</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorAccent">@color/color9</item>
+
+
+        <!-- Customize your dark theme here. -->
+        <item name="android:colorBackground">@color/color9</item>
+    </style>
+</resources>

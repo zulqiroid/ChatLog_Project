@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Rounded Rectangle -->
+    <path
+        android:fillColor="@color/color7"
+        android:pathData="M 0 0 h 100 a 8 8 0 0 1 8 8 v 84 a 8 8 0 0 1 -8 8 h -100 a 8 8 0 0 1 -8 -8 v -84 a 8 8 0 0 1 8 -8 z" />
+
+    <!-- Tail -->
+    <path
+        android:fillColor="@color/color7"
+        android:pathData="M 45 90 L 50 100 L 55 90 Z" />
+</vector>

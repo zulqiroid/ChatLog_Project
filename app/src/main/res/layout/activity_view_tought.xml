@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.View_tought"
+    android:background="@color/color9"
+    android:name=".NextActivity"
+   >
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_20sdp">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/b_w"/>
+    </Toolbar>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_100sdp">
+        <!-- Circular Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@id/any_thought_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/user_w"
+            app:civ_border_color="@color/color2"
+            app:civ_border_overlay="true"
+            app:civ_border_width="1dp" />
+
+            <EditText
+                android:id="@+id/any_thought_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-20dp"
+                android:background="@drawable/any_thought_background"
+                android:maxWidth="@dimen/_200sdp"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:scrollHorizontally="true"
+                android:singleLine="false"
+                android:hint="Your Sentimental \nThought?"
+                android:textColorHint="@color/color3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:background="@drawable/custom_btn"
+        android:text="Share"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

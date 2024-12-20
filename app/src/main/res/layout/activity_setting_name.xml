@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.setting_name"
+    android:background="@color/color9">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color8"
+            app:title="Display Name"
+            app:navigationIcon="@drawable/back_w"
+            app:titleTextColor="@android:color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is how your appear on Chatlog, so pick a name your friends will see"
+            android:textColor="@color/color4"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:lineSpacingExtra="@dimen/_5sdp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Name"
+                android:textColorHint="@color/color2"
+                app:boxCornerRadiusTopStart="@dimen/_10sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+                app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+                app:hintTextColor="@color/color2"
+                app:cursorColor="@color/color2"
+                app:helperTextTextColor="@color/color2"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                style="@style/TextInputLayoutOutlinedBox"
+                android:visibility="visible"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_edtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/update_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Update"
+            android:fontFamily="@font/suse_semibold"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14sdp"
+            android:background="@drawable/custom_btn"
+            android:textColor="@color/color2"/>
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

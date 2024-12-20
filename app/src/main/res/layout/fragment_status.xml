@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color9"
+    tools:context=".menu.DiscoverFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:id="@+id/flayout_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:background="?selectableItemBackground">
+
+            <RelativeLayout
+                android:id="@+id/image_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerInParent="true"
+                    android:padding="6dp"
+                    android:src="@drawable/user_w"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/white"/>
+
+                <com.devlomi.circularstatusview.CircularStatusView
+                    android:id="@+id/circular_status_view"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_51sdp"
+                    app:portion_color="@color/color3"
+                    android:layout_centerInParent="true"
+
+                    app:portion_spacing="5dp"
+                    app:portion_width="@dimen/_1sdp"
+                    app:portions_count="5" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_layout"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Status"
+                    android:textColor="@color/color2"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/recycler_view_Suggestion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/recycler_view_Frquest_layout"
+            android:orientation="vertical"
+            tools:ignore="ObsoleteLayoutParam">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent Statuses"
+                android:textColor="@color/color5"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/color7" />
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_view_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                tools:listitem="@layout/item_status"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/demo_layout"
+                app:shimmer_demo_layout_manager_type="linear_vertical"
+                tools:ignore="ObsoleteLayoutParam" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        app:srcCompat="@drawable/plus"
+        android:backgroundTint="@color/color8"
+        android:visibility="visible" />
+
+
+
+</FrameLayout>

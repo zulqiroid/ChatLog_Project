@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Birthday_signup"
+    android:background="@color/color9"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/_15sdp"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_above="@+id/view">
+    <TextView
+        android:id="@+id/gender_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick your gender"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp" />
+
+        <RadioGroup
+            android:id="@+id/gender_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/male_radiobutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableEnd="@android:drawable/btn_radio"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
+                android:text="Male"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                />
+
+            <RadioButton
+                android:id="@+id/female_radiobutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableEnd="@android:drawable/btn_radio"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
+                android:text="Female"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                />
+
+            <RadioButton
+                android:id="@+id/prefer_not_to_say_radiobutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableEnd="@android:drawable/btn_radio"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
+                android:text="Prefer not to say"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                />
+
+        </RadioGroup>
+        <View
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/color5"/>
+    </LinearLayout>
+<View
+    android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/color9"
+    android:layout_centerInParent="true"
+    />
+    <LinearLayout
+        android:id="@+id/birthday_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_15sdp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick your birthday"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white"
+            />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+
+        <EditText
+            android:id="@+id/day_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Day"
+            android:gravity="center"
+            android:textColorHint="@color/color5"
+            android:inputType="number"
+            android:maxLength="2"
+            android:backgroundTint="@color/color7"
+            />
+
+        <EditText
+            android:id="@+id/month_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Month"
+            android:gravity="center"
+            android:textColorHint="@color/color5"
+            android:inputType="number"
+            android:maxLength="2"
+            android:backgroundTint="@color/color7"
+            />
+
+        <EditText
+            android:id="@+id/year_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Year"
+            android:gravity="center"
+            android:textColorHint="@color/color5"
+            android:inputType="number"
+            android:maxLength="4"
+            android:backgroundTint="@color/color7"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continue_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:layout_below="@id/birthday_layout"
+        android:textSize="@dimen/_14sdp"
+        android:background="@drawable/custom_btn"
+        android:textColor="@color/color2"/>
+</LinearLayout>
+
+</RelativeLayout>

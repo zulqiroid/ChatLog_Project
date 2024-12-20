@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color9"
+    android:id="@+id/main"
+    android:padding="16dp">
+
+    <!-- Profile Picture -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/caller_profile_picture"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_w"
+        android:background="@drawable/circle_background" />
+
+    <!-- Caller Name -->
+    <TextView
+        android:id="@+id/caller_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caller_profile_picture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:text="Caller Name"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+
+    <!-- Incoming Call Label -->
+    <TextView
+        android:id="@+id/incoming_call_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caller_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Incoming Video Call..."
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/white" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="@dimen/_90sdp"
+    >
+    <!-- Accept Button -->
+   <ImageButton
+       android:id="@+id/accept_btn"
+       android:layout_width="@dimen/_60sdp"
+       android:layout_height="@dimen/_60sdp"
+       android:src="@drawable/phone"
+       android:layout_marginEnd="@dimen/_45sdp"
+       android:scaleType="fitCenter"
+       android:background="@drawable/button"
+       />
+    <!-- Reject Button -->
+    <ImageButton
+        android:id="@+id/reject_btn"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:src="@drawable/circle"
+        android:layout_marginStart="@dimen/_45sdp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/button"/>
+</LinearLayout>
+
+</RelativeLayout>
